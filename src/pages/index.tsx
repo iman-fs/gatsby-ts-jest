@@ -18,7 +18,7 @@ const Icon2 = styled(Chevron)`
   fill: red;
 }
 `
-const HeadLineStyled = styled(HeadLine)`
+const HeadLineStyled = styled(props => <HeadLine {...props} />)`
   color:red !important;
 `
 const IndexPage = () => (
