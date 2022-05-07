@@ -1,21 +1,34 @@
 import * as React from "react"
-import { Link } from "gatsby"
+// import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import HeadLine from "../components/HeadLine"
 
+import styled from 'styled-components';
+
+import Chevron  from '../images/chevron-bottom.svg'
+
+const Text = styled.h1`
+  font-size: 2.5em;
+  color: palevioletred;
+  text-align:center;
+`;
+
+const Icon2 = styled(Chevron)`
+& path {
+  fill: red;
+}
+`
+const HeadLineStyled = styled(HeadLine)`
+  color:red !important;
+`
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+    <>
+      <HeadLineStyled/>
+      <Text>here's my test icon: 
+        <Icon2 />
+      </Text>
+    </>
+
 )
 
 export default IndexPage
